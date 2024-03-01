@@ -1,23 +1,13 @@
-import Link from 'next/link';
+import DashboardHeader from '@/components/dashboard/header';
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const DashboardLayout = ({ children }) => {
     return (
-        <div>
-            <ul>
-                <li>
-                    <Link href="/dashboard">Dashboard</Link>
-                </li>
-                <li>
-                    <Link href="/dashboard/products">Products</Link>
-                </li>
-                <li>
-                    <Link href="/dashboard/profile">Profile</Link>
-                </li>
-            </ul>
-
-            {children}
-        </div>
+        <>
+            <DashboardHeader />
+            <Container className="flex-grow-1">{children}</Container>
+        </>
     );
 };
 

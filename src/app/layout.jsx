@@ -16,10 +16,7 @@ export default function RootLayout({ children }) {
             <body
                 className={`${inter.className} d-flex flex-column justify-content-between h-100`}
             >
-                <Header />
-                <main className='flex-grow-1'>{children}</main>
-
-                <Footer />
+               {children}
             </body>
         </html>
     );
